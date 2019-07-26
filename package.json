@@ -1,0 +1,22 @@
+{
+  "name": "nodedemo",
+  "version": "1.0.0",
+  "description": "Node Js API",
+  "main": "App.js",
+  "scripts": {
+    "dev": "nodemon App.js"
+  },
+  "keywords": [
+    "node",
+    "api"
+  ],
+  "author": "Abhay Bhosale",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.6",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.1"
+  }
+}

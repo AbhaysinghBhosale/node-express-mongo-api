@@ -1,3 +1,5 @@
+const Post = require('../models/post');
+
 exports.defaultRoute = (req,res)=>{
     res.send('Welcome to Node Application');
 }
@@ -16,4 +18,9 @@ exports.getUser = (req,res)=>{
     } else {
         res.send('No User Found');
     }
+}
+
+exports.createPost = (req,res) =>{
+    const post = new Post(req,body);
+    console.log('creating post',post)
 }

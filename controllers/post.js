@@ -25,7 +25,7 @@ exports.createPost = (req,res) =>{
     //console.log('creating post',req.body)
     post.save((err,result)=>{
         if(err){
-            return res.status(400),json({
+            return res.status(400).json({
                 error:err
             })
         }

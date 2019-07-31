@@ -3,6 +3,8 @@ const morgan = require('morgan');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const expressValidator = require('express-validator');
+
 const postRoutes  = require('./routes/post');
 
 const app = express();
@@ -18,6 +20,7 @@ mongoose.connection.on("Error",err =>{
 //middleware
 app.use(morgan('dev'));
 app.use(bodyParser.json());
+app.use(expressValidator());
 //bringing routes
 app.use('/',postRoutes);
 
